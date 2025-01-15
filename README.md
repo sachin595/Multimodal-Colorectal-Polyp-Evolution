@@ -20,6 +20,20 @@ AI-Enhanced Predictive Model for Longitudinal Evolution and Malignancy Potential
    - [Fusion Model](#fusion-model)
 
 ---
+## **Abstract**
+Polyp evolution and malignancy prediction are pivotal in clinical gastroenterology, focusing on early detection and tailored management of high-risk cases. Traditional approaches often overlook temporal dynamics and multimodal data integration, limiting their predictive accuracy and clinical utility. This study presents a novel machine learning framework for predicting polyp evolution and malignancy risk, equipping clinicians with actionable insights. By combining longitudinal data simulation, advanced imaging feature extraction, and metadata integration, the framework enhances surveillance and early intervention strategies.
+
+---
+
+## **Project Objectives**
+1. **Evolutionary Prediction of Polyp Characteristics**:
+   - Predict changes in polyp size and morphology over time to track progression toward higher-risk states like adenocarcinoma.
+   
+2. **Malignancy Transformation Probability**:
+   - Develop a risk model to estimate the likelihood of polyps transitioning from benign to malignant states using baseline characteristics and patient demographics.
+
+3. **Personalized Surveillance Planning**:
+   - Provide individualized recommendations for follow-up, ensuring clinicians can focus on high-risk cases while optimizing resource allocation.
 ---
 
 ## **Dataset Description**
@@ -80,3 +94,89 @@ Multimodal Learning: A fusion model integrates multiple or diverse data types, c
 ![Dataset Workflow](dataset_workflow.png)
 
 ---
+
+## **Implementation and Results**
+
+### **Objective 1: Evolutionary Prediction of Polyp Characteristics**
+
+#### Approach
+- Created a simulated longitudinal dataset representing changes over 30 months at six-month intervals.
+- Developed two models:
+  1. **LSTM-Based Regression Model**: Predicts polyp size at each time step.
+  2. **Transformer-Based Classifier**: Predicts transitions in polyp morphology.
+
+#### Key Results
+- **Polyp Size Prediction**: Achieved a Mean Absolute Error (MAE) of **0.0689**.
+- **Morphology Prediction**: Achieved **85% accuracy**, capturing transitions such as Tubular (low-risk) to Villous or Adenocarcinoma (high-risk).
+  •	**Example Clinical Statements**:
+1.	Month 6: "Polyp size is predicted to be 0.09 cm with a tubular morphology, indicating low risk. Routine monitoring is advised."
+2.	Month 12: "Polyp size increases to 0.12 cm, maintaining tubular morphology. Risk remains low, requiring no immediate intervention."
+3.	Month 18: "Polyp size increases to 0.18 cm, showing early signs of morphological changes. Closer follow-up is recommended."
+4.	Month 24: "Polyp size reaches 0.25 cm, transitioning to Villous morphology. More detailed evaluation is needed."
+5.	Month 30: "Polyp size grows to 0.30 cm with high-risk Villous morphology. Immediate clinical attention is required."
+•	**Clinical Utility**:
+	- Provides actionable insights into polyp progression, with individualized timelines for follow-up:
+   Stable Polyps: Routine monitoring every 1–3 years.
+	Rapidly Growing Polyps: Frequent monitoring or intervention within 3–6 months.
+---
+
+### **Objective 2: Malignancy Transformation Probability**
+
+#### Approach
+- Developed a **Fusion Model** combining:
+  - Patient metadata (e.g., demographics, clinical context).
+  - Image features extracted using **Vision Transformer (ViT)** to capture malignancy indicators.
+
+#### Key Results
+- **Accuracy**: Achieved **99.89%** in predicting malignancy potential and recurrence risk.
+- **Risk Categories**:
+  - **Low Risk**: Polyp shows minimal progression; follow-up recommended in 1–3 years.
+  - **Moderate Risk**: Likelihood of recurrence; follow-up advised within 6–12 months.
+  - **High Risk**: Significant malignancy potential; immediate follow-up required within 3–6 months.
+**Outputs:**
+	- Risk Stratification: Classifies polyps as "Not Likely to Recur" or "Likely to Recur."
+   - Malignancy Likelihood:
+	   Low: Probability < 20%.
+	   Moderate: Probability 20%–50%.
+	   High: Probability > 50%.
+**Example Predictions**:
+- 1.	Sample 1: "Probability = 0.0002; Risk Category = Low Risk; Likelihood of Malignancy = Low."
+- 2.	Sample 5: "Probability = 1.0000; Risk Category = High Risk; Likelihood of Malignancy = High."
+
+---
+
+### **Objective 3: Personalized Surveillance Planning**
+
+#### Approach
+- Combined model outputs (size, morphology, malignancy likelihood) to generate follow-up plans.
+- Integrated personalized surveillance timelines:
+  - **Low Risk**: Routine check-ups every 1–3 years.
+  - **Moderate Risk**: Follow-up every 6–12 months.
+  - **High Risk**: Immediate evaluation within 3–6 months.
+
+#### Key Results
+- Streamlined clinical decision-making by prioritizing high-risk cases.
+- Optimized allocation of surveillance resources, reducing unnecessary interventions.
+
+---
+
+## **Summary of Achievements**
+1. **Predictive Accuracy**:
+   - **Polyp Size Prediction**: MAE of **0.0689**.
+   - **Morphology Prediction**: **85% accuracy**.
+   - **Malignancy Prediction**: **98.89% accuracy**.
+
+2. **Clinical Impact**:
+   - Facilitates longitudinal tracking of polyp evolution, enhancing early detection.
+   - Provides granular risk stratifications for malignancy potential, aiding personalized interventions.
+
+3. **Utility**:
+   - Empowers clinicians with actionable predictions and follow-up recommendations, improving patient outcomes while optimizing resources.
+
+---
+
+## **License**
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+The dataset used in this project is licensed under the Attribution 4.0 International (CC BY 4.0). For more details, visit the [Creative Commons License](https://creativecommons.org/licenses/by/4.0/).
+
