@@ -12,12 +12,18 @@ AI-Enhanced Predictive Model for Longitudinal Evolution and Malignancy Potential
 
 ## **Table of Contents**
 1. [Abstract](#abstract)
-2. [Project Objective](#project-objective)
+2. [Project Objectives](#project-objectives)
 3. [Dataset Description](#dataset-description)
 4. [Dataset Preprocessing](#dataset-preprocessing)
 5. [Implementation Approach](#implementation-approach)
    - [Multimodal AI Framework](#multimodal-ai-framework)
    - [Fusion Model](#fusion-model)
+3. [Process and Results](#process-and-results)
+   - [Objective 1: Evolutionary Prediction of Polyp Characteristics](#objective-1-evolutionary-prediction-of-polyp-characteristics)
+   - [Objective 2: Malignancy Transformation Probability](#objective-2-malignancy-transformation-probability)
+   - [Objective 3: Personalized Surveillance Planning](#objective-3-personalized-surveillance-planning)
+4. [Summary of Achievements](#summary-of-achievements)
+5. [License](#license)
 
 ---
 ## **Abstract**
@@ -95,7 +101,7 @@ Multimodal Learning: A fusion model integrates multiple or diverse data types, c
 
 ---
 
-## **Implementation and Results**
+## **Process and Results**
 
 ### **Objective 1: Evolutionary Prediction of Polyp Characteristics**
 
@@ -108,16 +114,16 @@ Multimodal Learning: A fusion model integrates multiple or diverse data types, c
 #### Key Results
 - **Polyp Size Prediction**: Achieved a Mean Absolute Error (MAE) of **0.0689**.
 - **Morphology Prediction**: Achieved **85% accuracy**, capturing transitions such as Tubular (low-risk) to Villous or Adenocarcinoma (high-risk).
-  •	**Example Clinical Statements**:
-1.	Month 6: "Polyp size is predicted to be 0.09 cm with a tubular morphology, indicating low risk. Routine monitoring is advised."
-2.	Month 12: "Polyp size increases to 0.12 cm, maintaining tubular morphology. Risk remains low, requiring no immediate intervention."
-3.	Month 18: "Polyp size increases to 0.18 cm, showing early signs of morphological changes. Closer follow-up is recommended."
-4.	Month 24: "Polyp size reaches 0.25 cm, transitioning to Villous morphology. More detailed evaluation is needed."
-5.	Month 30: "Polyp size grows to 0.30 cm with high-risk Villous morphology. Immediate clinical attention is required."
-•	**Clinical Utility**:
+- **Example Clinical Statements**:
+	1.	Month 6: "Polyp size is predicted to be 0.09 cm with a tubular morphology, indicating low risk. Routine monitoring is advised."
+	2.	Month 12: "Polyp size increases to 0.12 cm, maintaining tubular morphology. Risk remains low, requiring no immediate intervention."
+	3.	Month 18: "Polyp size increases to 0.18 cm, showing early signs of morphological changes. Closer follow-up is recommended."
+	4.	Month 24: "Polyp size reaches 0.25 cm, transitioning to Villous morphology. More detailed evaluation is needed."
+	5.	Month 30: "Polyp size grows to 0.30 cm with high-risk Villous morphology. Immediate clinical attention is required."
+- **Clinical Utility**:
 	- Provides actionable insights into polyp progression, with individualized timelines for follow-up:
-   Stable Polyps: Routine monitoring every 1–3 years.
-	Rapidly Growing Polyps: Frequent monitoring or intervention within 3–6 months.
+   		- Stable Polyps: Routine monitoring every 1–3 years.
+		- Rapidly Growing Polyps: Frequent monitoring or intervention within 3–6 months.
 ---
 
 ### **Objective 2: Malignancy Transformation Probability**
@@ -133,15 +139,15 @@ Multimodal Learning: A fusion model integrates multiple or diverse data types, c
   - **Low Risk**: Polyp shows minimal progression; follow-up recommended in 1–3 years.
   - **Moderate Risk**: Likelihood of recurrence; follow-up advised within 6–12 months.
   - **High Risk**: Significant malignancy potential; immediate follow-up required within 3–6 months.
-**Outputs:**
+ - **Outputs:**
 	- Risk Stratification: Classifies polyps as "Not Likely to Recur" or "Likely to Recur."
    - Malignancy Likelihood:
-	   Low: Probability < 20%.
-	   Moderate: Probability 20%–50%.
-	   High: Probability > 50%.
-**Example Predictions**:
-- 1.	Sample 1: "Probability = 0.0002; Risk Category = Low Risk; Likelihood of Malignancy = Low."
-- 2.	Sample 5: "Probability = 1.0000; Risk Category = High Risk; Likelihood of Malignancy = High."
+	   - Low: Probability < 20%.
+	   - Moderate: Probability 20%–50%.
+	   - High: Probability > 50%.
+- **Example Predictions**:
+	- 1.	Sample 1: "Probability = 0.0002; Risk Category = Low Risk; Likelihood of Malignancy = Low."
+	- 2.	Sample 5: "Probability = 1.0000; Risk Category = High Risk; Likelihood of Malignancy = High."
 
 ---
 
