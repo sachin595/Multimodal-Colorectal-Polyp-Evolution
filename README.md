@@ -153,6 +153,8 @@ Multimodal Learning: A fusion model integrates multiple or diverse data types, c
 	- 1.	Sample 1: "Probability = 0.0002; Risk Category = Low Risk; Likelihood of Malignancy = Low."
 	- 2.	Sample 5: "Probability = 1.0000; Risk Category = High Risk; Likelihood of Malignancy = High."
 
+  ![Evolution](evolution_example.png)
+
 ---
 
 ### **Objective 3: Personalized Surveillance Planning**
