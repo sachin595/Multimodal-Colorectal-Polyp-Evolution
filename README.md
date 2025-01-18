@@ -1,4 +1,4 @@
-# Multimodal-Colorectal-Polyp-Evolution
+# Multimodal Colorectal Polyp Evolution
 AI-Enhanced Predictive Model for Longitudinal Evolution and Malignancy Potential of Colorectal Polyps 
 
 ![Research Medical AI](https://img.shields.io/badge/Research-Medical%20AI-green.svg)
